@@ -3,21 +3,21 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #c383f5;
+  background-color: whitesmoke;
   line-height: 1.6;
 }
 
 section {
   padding: 20px;
   margin: 20px;
-  background-color: rgb(142, 69, 194);
+  background-color: #a7a3a3;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
-  background-color: #793579;
-  color: rgb(12, 1, 14);
+  background-color: #333;
+  color: whitesmoke;
   padding: 20px;
   text-align: center;
 }
@@ -38,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: rgb(1, 14, 3);
+  color: whitesmoke;
   text-decoration: none;
   font-weight: bold;
 }
@@ -53,8 +53,8 @@ section {
 }
 
 footer {
-  background-color: #793579;
-  color: rgb(12, 1, 14);
+  background-color: #333;
+  color: whitesmoke;
   text-align: center;
   padding: 10px;
   position: fixed;
