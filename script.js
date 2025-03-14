@@ -96,18 +96,16 @@ function getLocation() {
     locationElement.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-// Function to display the user's position
+
 function showPosition(position) {
   const locationElement = document.getElementById("location");
 
-  // Step 1: Display the latitude and longitude
   locationElement.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
 }
-// Function to handle errors
+
 function showError(error) {
   const locationElement = document.getElementById("location");
 
-  // Step 1: Handle different error codes
   switch (error.code) {
     case error.PERMISSION_DENIED:
       locationElement.innerHTML = "User denied the request for Geolocation.";
