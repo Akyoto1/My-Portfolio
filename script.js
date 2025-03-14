@@ -12,18 +12,18 @@ const successMessage = document.getElementById("successMessage");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  console.log("Form submitted!");
 });
+
 form.addEventListener("submit", function (event) {
-  // Clear any previous error messages
   nameError.textContent = "";
 
   if (nameInput.value.trim() === "") {
     nameError.textContent = "Please enter your name";
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
   }
 });
 form.addEventListener("submit", function (event) {
-  // Clear any previous error messages
   nameError.textContent = "";
   emailError.textContent = "";
 
@@ -41,13 +41,11 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-// Function to validate email format
 function validateEmail(email) {
   const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   return re.test(String(email));
 }
 form.addEventListener("submit", function (event) {
-  // Clear any previous error messages
   nameError.textContent = "";
   emailError.textContent = "";
   passwordError.textContent = "";
@@ -82,3 +80,46 @@ passwordInput.addEventListener("input", function () {
     passwordError.style.color = "green";
   }
 });
+
+const locationButton = document.getElementById("get-location-btn");
+
+locationButton.addEventListener("click", getLocation);
+
+function getLocation() {
+  const locationElement = document.getElementById("location");
+
+  if (navigator.geolocation) {
+    locationElement.innerHTML = "Getting location...";
+
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else {
+    locationElement.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+// Function to display the user's position
+function showPosition(position) {
+  const locationElement = document.getElementById("location");
+
+  // Step 1: Display the latitude and longitude
+  locationElement.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`;
+}
+// Function to handle errors
+function showError(error) {
+  const locationElement = document.getElementById("location");
+
+  // Step 1: Handle different error codes
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      locationElement.innerHTML = "User denied the request for Geolocation.";
+      break;
+    case error.POSITION_UNAVAILABLE:
+      locationElement.innerHTML = "Location information is unavailable.";
+      break;
+    case error.TIMEOUT:
+      locationElement.innerHTML = "The request to get user location timed out.";
+      break;
+    case error.UNKNOWN_ERROR:
+      locationElement.innerHTML = "An unknown error occurred.";
+      break;
+  }
+}
