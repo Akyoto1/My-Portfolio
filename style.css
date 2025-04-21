@@ -100,3 +100,33 @@ footer {
     margin: 10px;
   }
 }
+body.about {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(42, 157, 199);
+  line-height: 1.6;
+  text-align: center;
+}
+body.about header {
+  background-color: #323333;
+  color: rgb(42, 157, 199);
+  padding: 20px;
+  text-align: center;
+}
+body.about section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #afdcf3;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body.about footer {
+  background-color: #333;
+  color: whitesmoke;
+  text-align: center;
+  padding: 1px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
