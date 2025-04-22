@@ -177,9 +177,54 @@ body.projects .projects {
 }
 .contact-container {
   max-width: 500px;
-  margin: 40px;
+  width: 90%;
+  margin: 40px auto;
   padding: 20px;
   background-color: #afdcf3;
   border-radius: 8px;
   box-shadow: (0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input [type="text"],
+form input [type="email"],
+form input [type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.success {
+  color: green;
+  font-size: 1.1em;
+}
+form button {
+  padding: 10px 20px;
+  background-color: #cb76ef;
+  color: antiquewhite;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #8337df;
 }
