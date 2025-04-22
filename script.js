@@ -83,7 +83,9 @@ passwordInput.addEventListener("input", function () {
 
 const locationButton = document.getElementById("get-location-btn");
 
-locationButton.addEventListener("click", getLocation);
+if (locationButton) {
+  locationButton.addEventListener("click", getLocation);
+}
 
 function getLocation() {
   const locationElement = document.getElementById("location");
