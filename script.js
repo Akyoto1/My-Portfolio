@@ -81,6 +81,8 @@ passwordInput.addEventListener("input", function () {
   }
 });
 
+//Location
+
 const locationButton = document.getElementById("get-location-btn");
 
 if (locationButton) {
@@ -122,4 +124,5 @@ function showError(error) {
       locationElement.innerHTML = "An unknown error occurred.";
       break;
   }
+  console.error("Geolocation error: ${error.message}");
 }

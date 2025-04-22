@@ -175,3 +175,11 @@ body.projects .projects {
   text-decoration: none;
   font-weight: bold;
 }
+.contact-container {
+  max-width: 500px;
+  margin: 40px;
+  padding: 20px;
+  background-color: #afdcf3;
+  border-radius: 8px;
+  box-shadow: (0, 0, 0, 0.1);
+}
