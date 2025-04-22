@@ -147,3 +147,27 @@ body.about nav ul li a {
   display: block;
   margin: 20px auto;
 }
+
+body.projects .projects {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+  background-color: rgb(42, 157, 199);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(108, 175, 27);
+}
+.project h3 {
+  margin-top: 0;
+}
+.project a {
+  color: rgb(63, 109, 159);
+  text-decoration: none;
+  font-weight: bold;
+}
